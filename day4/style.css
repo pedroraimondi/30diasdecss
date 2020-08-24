@@ -49,7 +49,7 @@ button::after{
     position: absolute;
     width: 32px;
     height: 4px;
-    background: #aac9c0;
+    background: #9ebcb4;
     transform: skewX(50deg);
     transition: .3s ease;
 }
