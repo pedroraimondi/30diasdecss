@@ -1,0 +1,69 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-color: #342A73;
+    
+    background: linear-gradient(0deg, #246655, #ffffff);
+    background-size: 400% 400%;
+
+    -webkit-animation: AnimationName 25s ease infinite;
+    -moz-animation: AnimationName 25s ease infinite;
+    animation: AnimationName 25s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 60%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+button {
+    cursor: pointer;
+    width: 350px;
+    height: 70px;
+    border: 4px solid;
+    background: none;
+    position: relative;
+    color: #ffffff;
+    font: 1.3rem 'arial black';
+    font-weight: 300;
+}
+
+button::before,
+button::after{
+    content: "";
+    position: absolute;
+    width: 32px;
+    height: 4px;
+    background: #aac9c0;
+    transform: skewX(50deg);
+    transition: .3s ease;
+}
+
+button::before
+{
+    top: -4px;
+    left: 10%;
+}
+button::after
+{
+    bottom: -4px;
+    right: 10%;
+}
+
+button:hover::before{left: 80%;transform: skew(-50deg);}
+button:hover::after{right: 80%;transform: skew(-50deg);}
