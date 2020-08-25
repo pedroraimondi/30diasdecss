@@ -1,0 +1,42 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 140px;
+    width: 140px;
+    border: none;
+    background-color: #000000;
+    border-radius: 50%;
+    cursor: pointer;
+    color: #fff;
+    font: 32px 'Verdana';
+    animation: pulse 3s linear infinite;
+}
+
+span{
+    animation: text-animation 3s ease infinite;
+}
+
+@keyframes text-animation{
+    0%{font-size: 32px}
+    20%{font-size: 34px; opacity: .1;}
+    40%{font-size: 32px; opacity: 1;}
+    60%{font-size: 34px; opacity: .1;}
+    80%{font-size: 32px; opacity: 1;}
+}
+
+@keyframes pulse{
+    0%{box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7), 0 0 0 0 rgba(0, 0, 0, 0.7);}
+    40%{box-shadow: 0 0 0 50px rgba(0, 0, 0, 0), 0 0 0 0 rgba(0, 0, 0, 0.7);}
+    80%{box-shadow: 0 0 0 50px rgba(0, 0, 0, 0), 0 0 0 30px rgba(0, 0, 0, 0);}
+    100%{box-shadow: 0 0 0 0 rgba(0, 0, 0, 0), 0 0 0 30px rgba(0, 0, 0, 0);}
+}
