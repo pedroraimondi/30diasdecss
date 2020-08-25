@@ -5,3 +5,4 @@ Um desafio criado originalmente pela @MilenaCarecho onde durante 30 dias iremos 
 - 21/08/2020 - Dia 02 :heavy_check_mark: - https://bit.ly/2YnrQeI
 - 22/08/2020 - Dia 03 :heavy_check_mark: - https://bit.ly/2QiQEQA
 - 23/08/2020 - Dia 04 :heavy_check_mark: - https://bit.ly/31n2E9Z
+- 25/08/2020 - Dia 05 :heavy_check_mark: - https://bit.ly/32g8j0E
