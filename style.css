@@ -3,6 +3,7 @@
 html{
     scroll-behavior: smooth;
 }
+
 body {
     padding: 0;
     margin: 0;
@@ -15,6 +16,7 @@ body {
     justify-content: center;
     height: 100vh;
 }
+
 header{
     height: 100vh;
     background-color: #cccccc;
@@ -23,8 +25,11 @@ header{
 header h2{
     font-size: 4rem;
 }
+
 nav{
+    position: absolute;
     height: 10vh;
+    width: 93vw;
     display: flex;
     align-items: center;
     justify-content: space-between;
