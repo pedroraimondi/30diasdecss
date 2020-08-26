@@ -14,36 +14,32 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
 }
 
 header{
-    height: 100vh;
     background-color: #cccccc;
+}
+
+header div.container{
+    height: 100vh;
 }
 
 header h2{
     font-size: 4rem;
 }
 
-nav{
-    position: absolute;
-    height: 10vh;
-    width: 93vw;
+nav {
     display: flex;
-    align-items: center;
+    width: 89vw;
+    flex-flow: row wrap;
     justify-content: space-between;
-    padding: 0 2%;
-}
+    padding: 1% 5%;
+    position: absolute;
+  }
+  
+nav ul{list-style: none;}
 
-nav ul{
-    list-style: none;
-    padding-inline-start: 0px !important;
-}
-
-nav li{
-   display: inline;
-}
+nav li{display: inline;}
 
 nav li a {
     text-decoration: none;
@@ -51,12 +47,8 @@ nav li a {
     color: #000;
 }
 
-nav li a:visited {
-    color: #000;
-}
-nav li a:active{
-    color: #000;
-}
+nav li a:visited {color: #000;}
+nav li a:active{color: #000;}
 
 #logo{
     height: 40px;
@@ -64,6 +56,59 @@ nav li a:active{
     background-color: #333;
 }
 
-#sobre{background-color: #ffffff; height: 50vh;}
-#gallery{background-color: #cccccc; height: 100vh;}
+#sobre{
+    background-color: #ffffff;
+    height: 50vh;
+    display: flex;
+    flex-flow: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+#sobre h2{margin-top: 0}
+
+#gallery{
+    background-color: #cccccc;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    padding-top: 4%;
+    padding-bottom: 5%;
+}
+
+#gallery ul{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+#gallery ul li{
+    list-style: none;
+    margin: 10px;
+}
+
+#gallery ul li a,
+#gallery ul li a:visited,
+#gallery ul li a:active{
+    color: #000;
+    text-decoration: none;
+}
+
+#gallery ul li a img{
+    box-shadow: 10px 10px 20px #000;
+    height: 200px;
+}
+
+#gallery ul li a img:hover{
+    transform: scale(1.2);
+    transition: .2s;
+}
+
+@media (max-width: 800px){
+    #gallery ul li a img{
+        height: 50px;
+    }
+}
+
 #contato{background-color: #000000; color: #ffffff; height: 100vh;}
