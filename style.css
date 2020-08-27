@@ -57,11 +57,11 @@ nav li{
 nav li a {
     text-decoration: none;
     margin-left: 2.6rem;
-    color: #ffffff;
+    color: #000;
 }
 
-nav li a:visited {color: #ffffff;}
-nav li a:active{color: #ffffff;}
+nav li a:visited {color: #000;}
+nav li a:active{color: #000;}
 
 #logo{
     height: 40px;
