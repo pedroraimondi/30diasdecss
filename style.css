@@ -4,7 +4,7 @@ html{
     scroll-behavior: smooth;
 }
 
-body {
+* {
     padding: 0;
     margin: 0;
     font-family: 'Source Sans Pro', sans-serif;
@@ -17,8 +17,16 @@ body {
 }
 
 header{
-    background-color: #cccccc;
+    background-image: url('src/images/header-bg.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
 }
+
+/* @media (max-width: 1295px){header{background-size: 130%;}}
+@media (max-width: 990px){header{background-size: 140%;}}
+@media (max-width: 860px){header{background-size: 180%;}}
+@media (max-width: 1295px){header{background-size: 130%;}}
+@media (max-width: 1295px){header{background-size: 130%;}} */
 
 header div.container{
     height: 100vh;
@@ -26,29 +34,35 @@ header div.container{
 
 header h2{
     font-size: 4rem;
+    margin-right: 40%
+    ; 
 }
 
 nav {
     display: flex;
-    width: 89vw;
+    width: 100%;
     flex-flow: row wrap;
-    justify-content: space-between;
-    padding: 1% 5%;
+    align-items: center;
+    justify-content: center;
     position: absolute;
-  }
-  
-nav ul{list-style: none;}
+}
 
-nav li{display: inline;}
+nav ul{
+    list-style: none;
+}
+
+nav li{
+    display: inline;
+}
 
 nav li a {
     text-decoration: none;
     margin-left: 2.6rem;
-    color: #000;
+    color: #ffffff;
 }
 
-nav li a:visited {color: #000;}
-nav li a:active{color: #000;}
+nav li a:visited {color: #ffffff;}
+nav li a:active{color: #ffffff;}
 
 #logo{
     height: 40px;
@@ -57,58 +71,93 @@ nav li a:active{color: #000;}
 }
 
 #sobre{
+    position: relative;
     background-color: #ffffff;
     height: 50vh;
     display: flex;
-    flex-flow: column;
-    text-align: center;
     align-items: center;
-    justify-content: center;
 }
 
-#sobre h2{margin-top: 0}
+#sobre h2{margin: 0 300px;}
+
+#sobre .back{
+    position: absolute;
+    left: 10%;
+    font-size: 300px;
+    transform: rotate(-25deg) skew(30deg);
+    color: #e2e2e2;
+}
 
 #gallery{
     background-color: #cccccc;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
     padding-top: 4%;
     padding-bottom: 5%;
 }
 
-#gallery ul{
+.header{
+    text-align: center;
+}
+
+.row {
     display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0 4px;
 }
 
-#gallery ul li{
-    list-style: none;
-    margin: 10px;
+.column {
+    flex: 40%;
+    max-width: 40%;
+    position: relative;
 }
 
-#gallery ul li a,
-#gallery ul li a:visited,
-#gallery ul li a:active{
+.column img {
+    height: 100%;
+    width: 100%;
+    vertical-align: middle;
+    margin: 5% 0;
+}
+
+.column a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.column a h3{
+    position: relative;
+    font-size: 34px;
     color: #000;
-    text-decoration: none;
+    padding: 0;
 }
 
-#gallery ul li a img{
-    box-shadow: 10px 10px 20px #000;
-    height: 200px;
+.hoverInfo {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
 }
 
-#gallery ul li a img:hover{
-    transform: scale(1.2);
-    transition: .2s;
+.imgTextInfo {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    opacity: 0;
+    color: #000;
+    font-size: 32px;
+    /* background-color: rgba(250, 0, 0, .5); */
+
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
-@media (max-width: 800px){
-    #gallery ul li a img{
-        height: 50px;
-    }
+.hoverInfo:hover .imgTextInfo {
+    opacity: 1;
+}
+.hoverInfo img:hover{
+    filter: blur(10px) grayscale(1);
+    transition: .5s linear;
 }
 
 #contato{background-color: #000000; color: #ffffff; height: 100vh;}
