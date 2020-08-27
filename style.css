@@ -34,8 +34,7 @@ header div.container{
 
 header h2{
     font-size: 4rem;
-    margin-right: 40%
-    ; 
+    margin-right: 40%;
 }
 
 nav {
@@ -112,10 +111,10 @@ nav li a:active{color: #ffffff;}
 }
 
 .column img {
-    height: 100%;
+    height: 300px;
     width: 100%;
     vertical-align: middle;
-    margin: 5% 0;
+    margin: 10%;
 }
 
 .column a{
