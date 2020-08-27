@@ -1,8 +1,7 @@
 # 30diasDeCSS
 Um desafio criado originalmente pela @MilenaCarecho onde durante 30 dias iremos aprender algo novo sobre CSS todos os dias.
 
-- 20/08/2020 - Dia 01 :heavy_check_mark: - https://bit.ly/2FIFjqZ
-- 21/08/2020 - Dia 02 :heavy_check_mark: - https://bit.ly/2YnrQeI
-- 22/08/2020 - Dia 03 :heavy_check_mark: - https://bit.ly/2QiQEQA
-- 23/08/2020 - Dia 04 :heavy_check_mark: - https://bit.ly/31n2E9Z
-- 25/08/2020 - Dia 05 :heavy_check_mark: - https://bit.ly/32g8j0E
+## Apresentação
+Estou desenvolvendo uma página com todos os desafios bem estruturados, explicação e meus contatos para portifólio e logo melhoro este Readme.
+
+Se quiser acompanhar o andamento [clique aqui](https://pedroraimondi.github.io/30diasdecss).
