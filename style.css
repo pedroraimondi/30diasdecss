@@ -50,13 +50,18 @@ nav {
     width: 100%;
     flex-flow: row wrap;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     position: absolute;
-    margin-top: 2%;
+    font-weight: 700;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+nav div.name{
+    padding-left: 5%;
 }
 
 nav ul{
     list-style: none;
+    padding: 2% 5%;
 }
 
 nav li{
@@ -66,11 +71,10 @@ nav li{
 nav li a {
     text-decoration: none;
     margin-left: 1.6rem;
-    color: #000;
 }
 
-nav li a:visited {color: #000;}
-nav li a:active{color: #000;}
+nav li a:visited {color: #fff;}
+nav li a:active{color: #fff;}
 
 #sobre{
     position: relative;
@@ -119,9 +123,10 @@ nav li a:active{color: #000;}
 @media(max-width: 480px){#sobre .back{font-size: 100px}}
 
 #gallery{
-    background-color: #cccccc;
+    background-color: #201919;
     padding-top: 4%;
     padding-bottom: 5%;
+    color: #fff;
 }
 
 .header{
