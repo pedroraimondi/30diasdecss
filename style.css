@@ -22,28 +22,37 @@ header{
     background-repeat: no-repeat;
 }
 
-/* @media (max-width: 1295px){header{background-size: 130%;}}
-@media (max-width: 990px){header{background-size: 140%;}}
-@media (max-width: 860px){header{background-size: 180%;}}
-@media (max-width: 1295px){header{background-size: 130%;}}
-@media (max-width: 1295px){header{background-size: 130%;}} */
-
 header div.container{
     height: 100vh;
 }
 
 header h2{
     font-size: 4rem;
-    margin-right: 40%;
+    color: #fff;
+    text-shadow: 3px 3px 4px #000;
 }
+
+@media (max-width: 1295px){header{background-size: 130%;}}
+@media (max-width: 1002px){header{background-size: 150%;}}
+@media (max-width: 874px){
+    header{background-size: 180%;}
+    header h2{font-size: 3rem;}
+}
+@media (max-width: 745px){header{background-size: 200%;}}
+@media (max-width: 660px){
+    header{background-size: 250%;}
+    header h2{max-width: 250px;}
+}
+@media (max-width: 550px){header{background-size: 500%;}}
 
 nav {
     display: flex;
     width: 100%;
     flex-flow: row wrap;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     position: absolute;
+    margin-top: 2%;
 }
 
 nav ul{
@@ -56,28 +65,46 @@ nav li{
 
 nav li a {
     text-decoration: none;
-    margin-left: 2.6rem;
+    margin-left: 1.6rem;
     color: #000;
 }
 
 nav li a:visited {color: #000;}
 nav li a:active{color: #000;}
 
-#logo{
-    height: 40px;
-    width: 40px;
-    background-color: #333;
-}
-
 #sobre{
     position: relative;
-    background-color: #ffffff;
     height: 50vh;
-    display: flex;
+    display: grid;
+    grid-template-columns: 40% 60%;
     align-items: center;
+    text-align: center;
+    justify-content: center !important;
 }
 
-#sobre h2{margin: 0 300px;}
+#sobre h2{
+    grid-column-start: 1;
+    grid-column-end: 1;
+}
+
+#sobre p{
+    max-width: 500px;
+    justify-self: center;
+    grid-column-start: 2;
+    grid-column-end: 2;
+}
+
+@media(max-width: 1300px){#sobre h2{left: 150px}}
+@media(max-width: 1030px){#sobre p{max-width: 300px}}
+@media(max-width: 910px){#sobre h2{left: 130px}}
+@media(max-width: 795px){#sobre h2{left: 120px}}
+@media(max-width: 695px){
+    #sobre h2{left: 100px}
+    #sobre p {
+        max-width: 100px;
+        font-size: 12px;
+    }
+}
 
 #sobre .back{
     position: absolute;
@@ -85,7 +112,11 @@ nav li a:active{color: #000;}
     font-size: 300px;
     transform: rotate(-25deg) skew(30deg);
     color: #e2e2e2;
+    z-index: -1;
 }
+
+@media(max-width: 647px){#sobre .back{font-size: 200px}}
+@media(max-width: 480px){#sobre .back{font-size: 100px}}
 
 #gallery{
     background-color: #cccccc;
@@ -95,26 +126,16 @@ nav li a:active{color: #000;}
 
 .header{
     text-align: center;
+    padding: 32px;
 }
 
-.row {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 0 4px;
-}
+.static{position: absolute;}
+.static:hover{opacity: 0;}
 
-.column {
-    flex: 40%;
-    max-width: 40%;
-    position: relative;
-}
-
-.column img {
-    height: 300px;
-    width: 100%;
-    vertical-align: middle;
-    margin: 10%;
+#gallery img,
+#gallery img .static {
+    padding: 5% 0;
+    height: 200px; 
 }
 
 .column a{
@@ -130,7 +151,7 @@ nav li a:active{color: #000;}
     padding: 0;
 }
 
-.hoverInfo {
+/* .hoverInfo {
     position: relative;
     cursor: pointer;
     overflow: hidden;
@@ -143,7 +164,7 @@ nav li a:active{color: #000;}
     opacity: 0;
     color: #000;
     font-size: 32px;
-    /* background-color: rgba(250, 0, 0, .5); */
+    background-color: rgba(250, 0, 0, .5);
 
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
@@ -157,6 +178,6 @@ nav li a:active{color: #000;}
 .hoverInfo img:hover{
     filter: blur(10px) grayscale(1);
     transition: .5s linear;
-}
+} */
 
 #contato{background-color: #000000; color: #ffffff; height: 100vh;}
