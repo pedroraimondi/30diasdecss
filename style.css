@@ -71,6 +71,7 @@ nav li{
 nav li a {
     text-decoration: none;
     margin-left: 1.6rem;
+    color: #fff;
 }
 
 nav ul li a:visited {color: #fff;}
