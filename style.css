@@ -73,8 +73,8 @@ nav li a {
     margin-left: 1.6rem;
 }
 
-nav li a:visited {color: #fff;}
-nav li a:active{color: #fff;}
+nav ul li a:visited {color: #fff;}
+nav ul li a:active{color: #fff;}
 
 #sobre{
     position: relative;
