@@ -1,0 +1,30 @@
+body{
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(177, 247, 168);
+}
+
+h1{
+    color: rgb(0, 0, 0);
+    font-size: 50px;
+    font-family: 'Press Start 2P', cursive;
+}
+span::before{
+    content: '';
+    font-size: 50px;
+    animation: word-swith 8s infinite;
+    font-family: 'Press Start 2P', cursive;
+}
+
+
+@keyframes word-swith{
+    0%,19%{content: 'Eu amo 🍻';}
+    20%,39%{content: 'Eu amo 🍞';}
+    40%,59%{content: 'Eu amo 🎶';}
+    60%,80%{content: 'Mas eu amo mais ainda...';}
+    81%,100%{content: 'Vencer desafios ✅🦾';}
+}
