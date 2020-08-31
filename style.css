@@ -26,7 +26,7 @@ header div.container{
     height: 100vh;
 }
 
-header h2{
+header h1{
     font-size: 4rem;
     color: #fff;
     text-shadow: 3px 3px 4px #000;
@@ -85,6 +85,8 @@ nav ul li a:active{color: #fff;}
     align-items: center;
     text-align: center;
     justify-content: center !important;
+    background-color: #000;
+    color: #fff;
 }
 
 #sobre h2{
@@ -124,66 +126,53 @@ nav ul li a:active{color: #fff;}
 @media(max-width: 480px){#sobre .back{font-size: 100px}}
 
 #gallery{
-    background-color: #201919;
     padding-top: 4%;
     padding-bottom: 5%;
-    color: #fff;
 }
 
 .header{
     text-align: center;
-    padding: 32px;
+    margin-bottom: 32px;
 }
 
-.static{position: absolute;}
-.static:hover{opacity: 0;}
-
-#gallery img,
-#gallery img .static {
-    padding: 5% 0;
-    height: 200px; 
+.container{
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    overflow: hidden;
+    margin: 0 15vw;
 }
 
-.column a{
+.gallery-item img{
+    max-width: 100%;
+    height: auto;
+}
+
+.gallery-item{
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    height: 300px;
+}
+
+.container a{
+    display: flex;
     justify-content: center;
+    text-decoration: none;
+    color: #000000;
+    width: 80%;
 }
 
-.column a h3{
-    position: relative;
-    font-size: 34px;
-    color: #000;
-    padding: 0;
+.titulo{
+    font-size: 3.12rem;
+    margin-bottom: 1vh;
 }
 
-/* .hoverInfo {
-    position: relative;
-    cursor: pointer;
-    overflow: hidden;
+.container h3{
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: inherit;
+    padding-bottom: 30px;
 }
-
-.imgTextInfo {
-    position: absolute;
-    top: 40%;
-    left: 40%;
-    opacity: 0;
-    color: #000;
-    font-size: 32px;
-    background-color: rgba(250, 0, 0, .5);
-
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-}
-
-.hoverInfo:hover .imgTextInfo {
-    opacity: 1;
-}
-.hoverInfo img:hover{
-    filter: blur(10px) grayscale(1);
-    transition: .5s linear;
-} */
 
 #contato{background-color: #000000; color: #ffffff; height: 100vh;}
