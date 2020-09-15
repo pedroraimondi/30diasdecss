@@ -68,14 +68,13 @@ nav li{
     display: inline;
 }
 
-nav li a {
+nav ul li a {
     text-decoration: none;
     margin-left: 1.6rem;
     color: #fff;
 }
 
-nav ul li a:visited {color: #fff;}
-nav ul li a:active{color: #fff;}
+nav ul li a:hover{color: rgb(117, 204, 45)}
 
 #sobre{
     position: relative;
@@ -135,44 +134,134 @@ nav ul li a:active{color: #fff;}
     margin-bottom: 32px;
 }
 
-.container{
+#gallery-grid{
     display: grid;
+    grid-template-columns: 100%;
     grid-template-rows: repeat(5, 1fr);
     overflow: hidden;
-    margin: 0 15vw;
+    padding: 0 5%;
 }
 
-.gallery-item img{
-    max-width: 100%;
-    height: auto;
+#gallery-grid h3{
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: inherit;
 }
 
 .gallery-item{
+    border: 3px solid black;
+    box-shadow:
+        0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+        0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+        0 12.5px 10px rgba(0, 0, 0, 0.06),
+        0 22.3px 17.9px rgba(0, 0, 0, 0.068);
+    padding: 0 4%;
+}
+
+.gallery-item img{
+    width: auto;
+    height: 80%;
+}
+
+.gallery-item{
+    text-decoration: none;
+    color: #000000;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 10px;
+    margin: 50px 0;
     height: 300px;
 }
 
-.container a{
-    display: flex;
-    justify-content: center;
-    text-decoration: none;
-    color: #000000;
-    width: 80%;
+.gallery-item:hover{
+    transform: scale(1.03);
+    transition: .5s;
 }
 
 .titulo{
     font-size: 3.12rem;
-    margin-bottom: 1vh;
 }
 
-.container h3{
-    font-size: 1.6rem;
-    font-weight: 600;
-    color: inherit;
-    padding-bottom: 30px;
+#contato{
+    background-color: #000000; 
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    padding: 5% 0;
 }
 
-#contato{background-color: #000000; color: #ffffff; height: 100vh;}
+#contato ul li{
+    list-style: none;
+    display: inline;
+    margin: 0 20px;
+}
+
+#contato ul li a{
+    text-decoration: none;
+}
+
+#contato ul li img,
+#contato ul li svg{
+    filter: invert(1);
+    height: 100%;
+    width: auto;
+}
+
+.modalDialog {
+    position: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.8);
+    z-index: 99999;
+    opacity:0;
+    /* -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in; */
+    pointer-events: none;
+}
+
+.modalDialog:target {
+    opacity:1;
+    pointer-events: auto;
+}
+
+.modalDialog > div {
+    position: relative;
+    margin: 10% 15%;
+    padding: 5%;
+    border-radius: 10px;
+    background: #fff;
+    color: #000;
+}
+
+.modalDialog > div h2{
+    margin-bottom: 5%;
+}
+
+.close {
+    padding: 1%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    -moz-box-shadow: 1px 1px 3px #000;
+    -webkit-box-shadow: 1px 1px 3px #000;
+    box-shadow: 1px 1px 3px #000;
+
+    color: #000;
+    background: #fff;
+    position: absolute;
+    right: -12px;
+    top: -10px;
+    height: 24px;
+    width: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    
+}
+
+.close:hover { background: #ac0404; }
